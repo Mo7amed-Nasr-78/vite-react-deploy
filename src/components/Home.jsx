@@ -27,8 +27,9 @@ const Home = () => {
                     </motion.h2>
                     <motion.button 
                         className="main_btn"
-                        initial={{ opacity: 0, x: "-100%" }}
+                        initial={{ opacity: 0, x: "-100%", scale: 1 }}
                         whileInView={{ opacity: 1, x: 0, transition: { type: "ease", duration: 0.7 } }}
+                        whileHover={{ scale: 0.95, transition: { type: "spring", duration: 0.5, mass: 0.5, damping: 8 } }}
                     >
                         get started
                     </motion.button>
