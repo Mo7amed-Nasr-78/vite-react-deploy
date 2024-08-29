@@ -14,7 +14,7 @@ const AboutUs = () => {
                 <motion.h3 
                     className="about_subtitle"
                     initial={{ opacity: 0, scale: 0.5 }}
-                    whileInView={{ opacity: 1, scale: 1, transition: { type: "ease", delay: 0.2, duration: 0.5 } }}
+                    whileInView={{ opacity: 0.75, scale: 1, transition: { type: "ease", delay: 0.2, duration: 0.5 } }}
                 >
                     Focusing on success only to boost your traction.
                 </motion.h3>

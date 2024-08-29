@@ -19,7 +19,7 @@ const Home = () => {
                     <motion.h2 
                         className="subtitle"
                         initial={{ opacity: 0, x: "-100%" }}
-                        whileInView={{ opacity: 1, x: 0, transition: { type: "ease", duration: 0.5 } }}
+                        whileInView={{ opacity: .75, x: 0, transition: { type: "ease", duration: 0.5 } }}
                     >
                         Leverage innovative solutions to attract, engage, and
                         retain your audience, driving growth and maximizing

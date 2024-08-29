@@ -14,7 +14,7 @@ const Steps = () => {
                 <motion.h3 
                     className="steps_subtitle"
                     initial={{ opacity: 0, scale: 0.5 }}
-                    whileInView={{ opacity: 1, scale: 1, transition: { type: "ease", delay: 0.2, duration: 0.5 } }}
+                    whileInView={{ opacity: 0.75, scale: 1, transition: { type: "ease", delay: 0.2, duration: 0.5 } }}
                 >
                     We showcase your brand offers to targeted audiences <br />{" "}
                     through relevant apps across the globe.
