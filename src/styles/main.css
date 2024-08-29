@@ -1022,7 +1022,6 @@ header .container .icons > svg:hover {
     }
 }
 
-
 .fast_cards .container .card:first-child {
     background: var(--dark_sky_color);
 }
@@ -1295,6 +1294,14 @@ footer .container .foot_rights {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+@media (max-width: 576px) {
+    footer .container .foot_rights {
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+    }
 }
 
 footer .container .foot_rights span {
