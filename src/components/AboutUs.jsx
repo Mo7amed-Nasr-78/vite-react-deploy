@@ -118,7 +118,7 @@ const AboutUs = () => {
                             </div>
                         </div>
                         <div className="app_prop">
-                            <img src="./support.svg" alt="icon" />
+                            <img src="./performance.svg" alt="icon" />
                             <div className="prop_txt">
                                 <h3 className="prop_title">
                                     Performance Analytics
