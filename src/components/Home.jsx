@@ -12,14 +12,14 @@ const Home = () => {
                     <motion.h1 
                         className="maintitle"
                         initial={{ opacity: 0, x: "-100%" }}
-                        whileInView={{opacity: 1, x: 0, transition: { type: "ease", duration: 0.3 } }}
+                        whileInView={{opacity: 1, x: 0, transition: { type: "ease", duration: 0.5 } }}
                     >
                         Unlock the Full Potential of Your Digital Presence
                     </motion.h1>
                     <motion.h2 
                         className="subtitle"
                         initial={{ opacity: 0, x: "-100%" }}
-                        whileInView={{ opacity: .75, x: 0, transition: { type: "ease", duration: 0.5 } }}
+                        whileInView={{ opacity: .75, x: 0, transition: { type: "ease",delay: 0.2, duration: 0.5 } }}
                     >
                         Leverage innovative solutions to attract, engage, and
                         retain your audience, driving growth and maximizing
@@ -28,7 +28,7 @@ const Home = () => {
                     <motion.button 
                         className="main_btn"
                         initial={{ opacity: 0, x: "-100%", scale: 1 }}
-                        whileInView={{ opacity: 1, x: 0, transition: { type: "ease", duration: 0.7 } }}
+                        whileInView={{ opacity: 1, x: 0, transition: { type: "ease", delay: 0.4, duration: 0.5 } }}
                         whileHover={{ scale: 0.95, transition: { type: "spring", duration: 0.5, mass: 0.5, damping: 8 } }}
                     >
                         get started
