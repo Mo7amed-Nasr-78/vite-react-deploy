@@ -57,11 +57,11 @@ const Header = () => {
             <div className="container">
                 <div className="head">
                     <a href="#home">
-                        <img src="/logo.svg" alt="logo" className="logo"/>
+                        <img src="./logo.svg" alt="logo" className="logo"/>
                     </a>
                     <ul className={`nav_list ${ visibe? "phone": "" } ${ listVisible? "show": "" }`}>
                         <li className="nav_item">
-                            <a href="#http://google.com" className="nav_link">
+                            <a href="" className="nav_link">
                                 user Acquisition
                             </a>
                         </li>
@@ -97,7 +97,7 @@ const Header = () => {
                         contact us
                     </a>
                     <button className="sign_in">
-                        <img src="/bx-log-in.svg" alt="logIn" />
+                        <img src="./bx-log-in.svg" alt="logIn" />
                         <span>sign in</span>
                     </button>
                 </div>

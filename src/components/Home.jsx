@@ -55,7 +55,7 @@ const Home = () => {
                     initial={{ opacity: 0, x: "100%" }}
                     whileInView={{ opacity: 1, x: 0, transition: { type: "spring", delay: 0.5, duration: 0.5, damping: 8, mass: 0.5 } }}
                 >
-                    <img src="/landing-image.svg" alt="image" />
+                    <img src="./landing-image.svg" alt="image" />
                 </motion.div>
                 <div className="props">
                     <motion.div 
@@ -63,7 +63,7 @@ const Home = () => {
                         initial={{ opacity: 0, y: 100 }}
                         whileInView={{ opacity: 1, y: 0, transition: { type: "ease", duration: 0.5 } }}
                     >
-                        <img src="/check.svg" alt="icon" />
+                        <img src="./check.svg" alt="icon" />
                         <span>First-party data for accurate AI matching.</span>
                     </motion.div>
                     <motion.div 
@@ -71,7 +71,7 @@ const Home = () => {
                         initial={{ opacity: 0, y: 100 }}
                         whileInView={{ opacity: 1, y: 0, transition: { type: "ease", delay: 0.2, duration: 0.5 } }}
                     >
-                        <img src="/check.svg" alt="icon" />
+                        <img src="./check.svg" alt="icon" />
                         <span>
                             Anti-fraud measures and transparent reporting.
                         </span>
@@ -81,7 +81,7 @@ const Home = () => {
                         initial={{ opacity: 0, y: 100 }}
                         whileInView={{ opacity: 1, y: 0, transition: { type: "ease", delay: 0.4, duration: 0.5 } }}
                     >
-                        <img src="/check.svg" alt="icon" />
+                        <img src="./check.svg" alt="icon" />
                         <span>Worldwide users from brand-safe apps.</span>
                     </motion.div>
                 </div>

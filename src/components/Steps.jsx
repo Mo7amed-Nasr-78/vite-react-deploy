@@ -40,7 +40,7 @@ const Steps = () => {
                             initial={{ opacity: 0, x: "100%" }}
                             whileInView={{ opacity: 1, x: 0, transition: { type: "ease", delay: 0.3, duration: 0.5, } }}
                         >
-                            <img src="/apps-illustration.svg" alt="image" />
+                            <img src="./apps-illustration.svg" alt="image" />
                         </motion.div>
                     </div>
                     <div className="steps_card">
@@ -62,7 +62,7 @@ const Steps = () => {
                             initial={{ opacity: 0, x: "-100%" }}
                             whileInView={{ opacity: 1, x: 0, transition: { type: "ease", delay: 0.3, duration: 0.5, } }}
                         >
-                            <img src="/step-2.png" alt="image" />
+                            <img src="./step-2.png" alt="image" />
                         </motion.div>
                     </div>
                     <div className="steps_card">
@@ -84,7 +84,7 @@ const Steps = () => {
                             initial={{ opacity: 0, x: "100%" }}
                             whileInView={{ opacity: 1, x: 0, transition: { type: "ease", delay: 0.3, duration: 0.5, } }}
                         >
-                            <img src="/step-3.png" alt="image" />
+                            <img src="./step-3.png" alt="image" />
                         </motion.div>
                     </div>
                 </div>

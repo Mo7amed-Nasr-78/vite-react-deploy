@@ -81,7 +81,7 @@ const Footer = () => {
                 <div className="foot_rights">
                     <span>© 2023. All rights reserved.</span>
                     <div className="methods">
-                        <img src="/methods.png" alt="payments" />
+                        <img src="./methods.png" alt="payments" />
                     </div>
                 </div>
             </div>
