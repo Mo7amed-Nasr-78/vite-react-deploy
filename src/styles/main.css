@@ -36,8 +36,10 @@ header .container .head {
     text-transform: capitalize;
 }
 
-header .container .head.phone {
-    display: none;
+@media (max-width: 992px) {
+    header .container .head.two {
+        display: none;
+    }
 }
 
 header .container .head .logo {
@@ -61,30 +63,30 @@ header .container .head .nav_list {
     gap: 25px;
 }
 
-header .container .head .nav_list.phone {
-    width: 400px;
-    height: 220px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    padding-left: 10px;
-    border-radius: var(--radius_15);
-    background: var(--primary_color);
-    border: 1px solid var(--accent_color);
-    transform: scale(0.9);
-    display: none;
-}
+@media (max-width: 992px) {
+    header .container .head .nav_list {
+        width: 400px;
+        height: 220px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        padding-left: 10px;
+        border-radius: var(--radius_15);
+        background: var(--primary_color);
+        border: 1px solid var(--accent_color);
+        display: none;
+    }
 
-header .container .head .nav_list.phone.show {
-    display: flex;
-    transform: scale(1);
+    header .container .head .nav_list.show {
+        display: flex;
+    }
 }
 
 @media (max-width: 768px) {
-    header .container .head .nav_list.phone {
+    header .container .head .nav_list {
         width: 100%;
     }
 }
@@ -97,13 +99,17 @@ header .container .head .nav_item.phone {
     display: none;
 }
 
-header .container .head .nav_list.phone .nav_item.phone {
-    display: block;
+@media (max-width: 992px) {
+    header .container .head .nav_list .nav_item.phone {
+        display: block;
+    }
 }
 
-header .container .head .nav_list.phone .nav_item {
-    width: calc(100% - 10px);
-    height: 40px;
+@media (max-width: 992px) {
+    header .container .head .nav_list .nav_item {
+        width: calc(100% - 10px);
+        height: 40px;
+    }
 }
 
 header .container .head .nav_link {
@@ -112,17 +118,19 @@ header .container .head .nav_link {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 500;
     transition: var(--trans_05);
     position: relative;
     overflow: hidden;
 }
 
-header .container .head .nav_list.phone .nav_link {
-    width: 100%;
-    font-weight: 600;
-    justify-content: space-between;
+@media (max-width: 992px) {
+    header .container .head .nav_list .nav_link {
+        width: 100%;
+        font-weight: 600;
+        justify-content: space-between;
+    }
 }
 
 @media (max-width: 1200px) {
@@ -135,9 +143,10 @@ header .container .head .nav_link:hover {
     color: var(--accent_color);
 }
 
-header .container .head .nav_list.phone .nav_link:hover {
-    color: var(--accent_color);
-    padding-left: 10px;
+@media (max-width: 992px) {
+    header .container .head .nav_list .nav_link:hover {
+        padding-left: 10px;
+    }
 }
 
 header .container .head .nav_link::before {
@@ -166,15 +175,18 @@ header .container .head .nav_link:hover > svg {
     color: var(--accent_color);
 }
 
-header .container .head .nav_list.phone .nav_link > svg {
-    transform: rotate(-90deg);
+@media (max-width: 992px) {
+    header .container .head .nav_list .nav_link > svg {
+        transform: rotate(-90deg);
+    }
 }
 
 header .container .head .contact {
     color: var(--secondary_color);
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 500;
     transition: var(--trans_05);
+    margin-right: -10px;
 }
 
 @media (max-width: 1200px) {
@@ -193,9 +205,9 @@ header .container .head .sign_in {
     align-items: center;
     justify-content: center;
     gap: 10px;
-    width: 150px;
-    height: 45px;
-    font-size: 20px;
+    width: 130px;
+    height: 40px;
+    font-size: 18px;
     font-weight: 500;
     border: none;
     border-radius: var(--radius_10);
@@ -219,18 +231,27 @@ header .container .icons {
     display: none;
 }
 
-header .container .icons.show {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+@media (max-width: 992px) {
+    header .container .icons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+    
 }
 
 header .container .icons > svg {
     color: var(--accent_color);
-    font-size: 34px;
+    font-size: 36px;
     transition: var(--trans_05);
     cursor: pointer;
+}
+
+@media (max-width: 992px) {
+    header .container .icons > svg {
+        font-size: 32px;
+    }
 }
 
 @media (max-width: 576px) {
@@ -240,7 +261,7 @@ header .container .icons > svg {
 }
 
 header .container .icons > svg:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 
 /* Home Style */
@@ -310,7 +331,7 @@ header .container .icons > svg:hover {
 }
 
 .home .container .home_txt .maintitle {
-    font-size: 48px;
+    font-size: 42px;
     font-weight: 700;
     color: var(--secondary_color);
     color: transparent;
@@ -333,6 +354,7 @@ header .container .icons > svg:hover {
 }
 
 .home .container .home_txt .subtitle {
+    width: 500px;
     font-size: 18px;
     font-weight: 600;
     color: var(--secondary_color);
@@ -343,8 +365,17 @@ header .container .icons > svg:hover {
 
 @media (max-width: 1200px) {
     .home .container .home_txt .subtitle {
+        width: 450px;
         font-size: 16px;
         line-height: 25px;
+    }
+}
+
+@media (max-width: 992px) {
+    .home .container .home_txt .subtitle {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
@@ -373,7 +404,6 @@ header .container .icons > svg:hover {
 }
 
 .home .container .home_txt .main_btn:hover {
-    /* transform: scale(0.95); */
     background: linear-gradient(to right, #015278d2, #0298de);
 }
 
@@ -514,7 +544,7 @@ header .container .icons > svg:hover {
 
 .about .container .about_title {
     color: var(--secondary_color);
-    font-size: 48px;
+    font-size: 38px;
     font-weight: 600;
     text-transform: capitalize;
     margin-bottom: 10px;
@@ -638,7 +668,7 @@ header .container .icons > svg:hover {
 
 .about .container .user .user_props .user_title,
 .about .container .app .app_props .app_title {
-    font-size: 40px;
+    font-size: 36px;
     font-weight: 700;
     color: var(--secondary_color);
     color: transparent;
@@ -649,22 +679,22 @@ header .container .icons > svg:hover {
     );
     background-clip: text;
     text-transform: capitalize;
-    margin-bottom: -10px;
+    margin-bottom: -15px;
 }
 
 @media (max-width: 1200px) {
     .about .container .user .user_props .user_title,
     .about .container .app .app_props .app_title {
-        font-size: 36px;
-        margin-bottom: 10px;
+        font-size: 34px;
+        margin-bottom: 5px;
     }
 }
 
 @media (max-width: 576px) {
     .about .container .user .user_props .user_title,
     .about .container .app .app_props .app_title {
-        font-size: 32px;
-        margin-bottom: 10px;
+        font-size: 28px;
+        margin-bottom: 5px;
     }
 }
 
@@ -706,7 +736,7 @@ header .container .icons > svg:hover {
 
 .about .container .user .user_props .user_prop .prop_txt .prop_title,
 .about .container .app .app_props .app_prop .prop_txt .prop_title {
-    font-size: 26px;
+    font-size: 24px;
     font-weight: 600;
     color: var(--secondary_color);
     margin-bottom: 5px;
@@ -789,7 +819,7 @@ header .container .icons > svg:hover {
 
 .steps .container .steps_title {
     color: var(--secondary_color);
-    font-size: 48px;
+    font-size: 38px;
     font-weight: 600;
     text-transform: capitalize;
     margin-bottom: 10px;
@@ -797,13 +827,13 @@ header .container .icons > svg:hover {
 
 @media (max-width: 1200px) {
     .steps .container .steps_title {
-        font-size: 42px;
+        font-size: 36px;
     }
 }
 
 @media (max-width: 576px) {
     .steps .container .steps_title {
-        font-size: 34px;
+        font-size: 32px;
     }
 }
 
@@ -813,7 +843,7 @@ header .container .icons > svg:hover {
 
 .steps .container .steps_subtitle {
     color: var(--secondary_color);
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 400;
     opacity: 0.75;
     margin-bottom: 150px;
@@ -821,13 +851,13 @@ header .container .icons > svg:hover {
 
 @media (max-width: 1200px) {
     .steps .container .steps_subtitle {
-        font-size: 18px;
+        font-size: 16px;
     }
 }
 
 @media (max-width: 576px) {
     .steps .container .steps_subtitle {
-        font-size: 16px;
+        font-size: 14px;
     }
 }
 
@@ -900,8 +930,8 @@ header .container .icons > svg:hover {
 }
 
 .steps .container .steps_cards .steps_card .card_txt .card_title {
-    font-size: 38px;
-    font-weight: 700;
+    font-size: 32px;
+    font-weight: 600;
     color: var(--secondary_color);
     color: transparent;
     background: linear-gradient(
@@ -916,7 +946,7 @@ header .container .icons > svg:hover {
 
 @media (max-width: 576px) {
     .steps .container .steps_cards .steps_card .card_txt .card_title {
-        font-size: 32px;
+        font-size: 28px;
     }
 }
 

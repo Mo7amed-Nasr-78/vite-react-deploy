@@ -10,7 +10,6 @@ const Header = () => {
 
     const [ scrollY, setScrollY ] = useState();
     const [ visibe, setVisile ] = useState(false);
-    const [ listVisible, setListVisible ] = useState(false);
 
     useEffect(() => {
 
@@ -18,35 +17,22 @@ const Header = () => {
             setScrollY(window.scrollY);
         }
 
-        const handleResize = () => {
-            console.log(document.querySelector(".container").clientWidth);
-            if (document.querySelector(".container").clientWidth <= 768) {
-                setVisile(true);
-            } else {
-                setVisile(false);
-            }
-        }
-
         window.addEventListener("scroll", handleScroll);
-        window.addEventListener("resize", handleResize);
-        window.addEventListener("load", handleResize);
-
 
         return () => {
             window.removeEventListener("scroll", handleScroll);
-            window.removeEventListener("resize", handleResize);
-            window.removeEventListener("load", handleResize);
+
         }
     }, [scrollY]);
 
+
     const handleClick = () => {
-        if (!listVisible) {
-            setListVisible(true);
+        if (!visibe) {
+            setVisile(true);
         } else {
-            setListVisible(false);
+            setVisile(false);
         }
     }
-
 
     return (
         <motion.header 
@@ -55,11 +41,11 @@ const Header = () => {
             whileInView={{ opacity: 1, y: 0, transition: { type: "spring", duration: 1, damping: 5 } }}
         >
             <div className="container">
-                <div className="head">
+                <div className="head one">
                     <a href="#home">
                         <img src="./logo.svg" alt="logo" className="logo"/>
                     </a>
-                    <ul className={`nav_list ${ visibe? "phone": "" } ${ listVisible? "show": "" }`}>
+                    <ul className={`nav_list ${ visibe? "show": "" }`}>
                         <li className="nav_item">
                             <a href="" className="nav_link">
                                 user Acquisition
@@ -92,7 +78,7 @@ const Header = () => {
                     </ul>
                 </div>
 
-                <div className={`head ${ visibe? "phone": "" }`}>
+                <div className="head two">
                     <a href="#" className="contact">
                         contact us
                     </a>
@@ -101,7 +87,7 @@ const Header = () => {
                         <span>sign in</span>
                     </button>
                 </div>
-                <div className={`icons ${ visibe? "show": "" }`}>
+                <div className="icons">
                     <CgProfile />
                     <FaBars onClick={handleClick}/>
                 </div>

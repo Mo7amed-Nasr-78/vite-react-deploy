@@ -9,7 +9,7 @@ const Steps = () => {
                     initial={{ opacity: 0, y: 100 }}
                     whileInView={{ opacity: 1, y: 0, transition: { type: "ease", duration: 0.5 } }}
                 >
-                    Driving revenue with <br /> <span>performance</span>
+                    Driving revenue with <span>performance</span>
                 </motion.h1>
                 <motion.h3 
                     className="steps_subtitle"
